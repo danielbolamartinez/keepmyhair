@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import "../assets/registro.css"
-import { getAllRegistros, deleteRegistro } from "../lib/db"
+import { getAllRegistros/*, deleteRegistro*/ } from "../lib/db"
 import AddEditRegistro from "../elements/AddEditRegistro"
 import type { Registro } from "../lib/db"
 
@@ -49,11 +49,11 @@ export default function Registro() {//Tabla principal
                         <p>Arrancó: <strong>{r.arranque ? 'Sí' : 'No'}</strong></p>
                         <p>Estrategia: <strong>{r.estrategia}</strong></p>
                         <p>Pensamiento: <strong>{r.pensamiento}</strong></p>
+                        <p>Impulso: <strong>{r.impulso}</strong></p>
                     </button>
                 ))}
             </div>
-            {mostrarForm && <AddEditRegistro
-                show={mostrarForm}
+            {mostrarForm && <AddEditRegistro                
                 onClose={desactivarEditar}
                 id={id}
             />}

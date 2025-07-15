@@ -70,7 +70,7 @@ export const getAllRegistros = async (): Promise<Registro[]> => {//Obtener todos
 
 export const deleteRegistro = async (id: number) => {//Eliminar un solo registro
     const db = await initDB();
-    db.delete(STORE_REGISTRO, id);
+    await db.delete(STORE_REGISTRO, id);
 };
 
 export const editRegistro = async (registro: Registro) => {//editar un solo registro

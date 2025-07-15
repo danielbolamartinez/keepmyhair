@@ -9,6 +9,7 @@ export default defineConfig({
       '$': '/src'  // atención: esto funciona si la ruta está bien en tu sistema y entorno
     }
   },
+  base: '/',
   plugins: [
     react(),
     VitePWA({

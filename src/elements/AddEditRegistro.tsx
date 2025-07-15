@@ -1,15 +1,13 @@
-import { addRegistro, editRegistro, getRegistro } from "../lib/db"
+import { addRegistro, editRegistro, getRegistro, deleteRegistro } from "../lib/db"
 import { useEffect, useState } from "react"
 import type { Registro } from "../lib/db";
 
 type AddEditProps = {
     id?: number | null;
-    show: boolean;
     onClose: () => void;
 }
 
-export default function AddEditRegistro({ id, show, onClose }: AddEditProps) {//Con esta función nos muestra formulario para crear una situación nueva
-    const [onOffAdd, setOnOffAdd] = useState<boolean>(false);//Con este mostramos el modal.
+export default function AddEditRegistro({ id, onClose }: AddEditProps) {//Con esta función nos muestra formulario para crear una situación nueva    
     const [formData, setFormData] = useState<Registro>({//Formulario en blanco, si se cambia algo cambiamos estos parametros.
         id: 0,
         lugar: "",
@@ -40,6 +38,7 @@ export default function AddEditRegistro({ id, show, onClose }: AddEditProps) {//
         if (id !== 0) { editRegistro(formData) }
         else { addRegistro(formData); }
         setFormData({//Una vez guardado el formData lo volvemos a poner en blanco
+            id: 0,
             lugar: "",
             emocion: "",
             impulso: "",
@@ -47,13 +46,21 @@ export default function AddEditRegistro({ id, show, onClose }: AddEditProps) {//
             estrategia: "",
             pensamiento: "",
         });
-        setOnOffAdd(false);
+
         onClose();
+    }
+
+    function borrarRegistro() {
+        if (formData.id !== undefined) {
+            console.log(`El id es ${formData.id}`);
+            deleteRegistro(formData.id);
+        } else {
+            console.warn("No hay ID para borrar el registro");
+        }
     }
 
     return (
         <>
-            {!onOffAdd ? <button onClick={() => setOnOffAdd(true)}> ➕</button> : null}
             <div className="modal-overlay">
                 <div className="modal-content">
                     <form onSubmit={handleSubmit}>
@@ -79,6 +86,14 @@ export default function AddEditRegistro({ id, show, onClose }: AddEditProps) {//
                         </div>
                         <div>
                             <button /*className="modal-add"*/ type="submit">Aceptar</button>
+                            {id && (
+                                <button type="button" onClick={() => {
+                                    borrarRegistro();
+                                    onClose();
+                                }}>
+                                    Borrar
+                                </button>
+                            )}
                             <button /*className="modal-close"*/ onClick={onClose}>Cancelar</button>
                         </div>
                     </form >
