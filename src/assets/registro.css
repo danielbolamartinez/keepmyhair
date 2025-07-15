@@ -1,0 +1,73 @@
+.thinkGrid{
+    display: flex;
+    gap: 0.75em;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.thinkCard {    
+    box-shadow: 0em 0em 0.55em rgb(200, 200, 200);
+    border-radius: 1em;
+    background-color: white;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    padding: 0.35em;
+    width: 15em;
+    p{
+        margin: 0;
+    }
+}
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 3.5rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  position: relative;
+  max-width: 400px;
+  width: 100%;
+}
+
+.modal-close {
+  
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.modal-add {
+  
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 0.5em;
+    font-size: 16px;
+}
+form input{
+    font-size: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: grey;
+}
+
+
+form div{
+    align-self: flex-start;
+    color: grey;
+}
+

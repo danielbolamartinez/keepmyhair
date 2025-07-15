@@ -1,0 +1,21 @@
+{
+    "name": "Keep my hair - Adiós Tricotilomania",
+    "short_name": "KeepMyHair",
+    "description": "Una pequeña app para ayudar a aquellos que sufren de tricotilomanía a eliminar esos momentos de quitarse pelos",
+    "theme_color": "#ffffff",
+    "background_color": "#ffffff",
+    "display": "standalone",
+    "start_url": "/",
+    "icons": [
+        {
+            "src": "pwa-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "pwa-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}
