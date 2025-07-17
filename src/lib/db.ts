@@ -84,12 +84,19 @@ export const addReflexion = async (reflexion: Reflexion) => {
   const db = await initDB();
   await db.put(STORE_REFLEXION, reflexion);
 };
-
-export const getReflexiones = async (): Promise<Reflexion[]> => {
+export const getReflexion = async (fecha:string)=>{
+    const db = await initDB();
+    return await db.get(STORE_REFLEXION, fecha);
+};
+export const getAllReflexiones = async (): Promise<Reflexion[]> => {
   const db = await initDB();
   return await db.getAll(STORE_REFLEXION);
 };
 export const deleteReflexion = async (fecha: string) => {
     const db = await initDB();
     db.delete(STORE_REFLEXION, fecha);
+};
+export const editReflexion = async (reflexion: Reflexion) => {
+    const db = await initDB();
+    db.put(STORE_REFLEXION,reflexion);
 };

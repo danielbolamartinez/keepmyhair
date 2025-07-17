@@ -9,7 +9,7 @@ import type { Registro } from "../lib/db"
 
 
 
-export default function Registro() {//Tabla principal
+export default function Registro() {
     const [registros, setRegistros] = useState<Registro[]>([]);
     const [mostrarForm, setMostrarForm] = useState<boolean>(false);
     const [id, setId] = useState<number|null>(null);
