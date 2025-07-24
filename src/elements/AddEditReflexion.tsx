@@ -3,18 +3,18 @@ import { useEffect, useState } from "react"
 import type { Reflexion } from "../lib/db";
 
 type AddEditProps = {
-    //fecha?: string | null;
+    fecha?: string | null;
     onClose: () => void;
 }
 
-export default function AddEditReflexion({ /*fecha,*/ onClose }: AddEditProps) {//Con esta función nos muestra formulario para crear una situación nueva    
+export default function AddEditReflexion({ fecha, onClose }: AddEditProps) {//Con esta función nos muestra formulario para crear una situación nueva    
     const [formData, setFormData] = useState<Reflexion>({//Formulario en blanco, si se cambia algo cambiamos estos parametros.
         fecha: "",
         queAyudo: "",
         momentoDificil: "",
         queProbar: ""
     });
-    /*fecha ? useEffect(() => {
+    fecha ? useEffect(() => {
         const fetchReflexion = async () => {
             {
                 const Reflexion = await getReflexion(fecha);
@@ -22,7 +22,7 @@ export default function AddEditReflexion({ /*fecha,*/ onClose }: AddEditProps) {
             }
         };
         fetchReflexion();
-    }, [fecha]) : null;*/
+    }, [fecha]) : null;
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {//Función para manejar los cambios en el formulario
         const { name, value } = e.target as HTMLInputElement;
@@ -41,10 +41,13 @@ export default function AddEditReflexion({ /*fecha,*/ onClose }: AddEditProps) {
             minute: "numeric",
             second: "numeric",
         });
-        formData.fecha = formatter.format(Date.now());
+        
 
-        //if (fecha !== "") { editReflexion(formData) }
-        addReflexion(formData);
+        if (fecha !== "") { 
+            editReflexion(formData) 
+        }else{
+            formData.fecha = formatter.format(Date.now());
+        addReflexion(formData);}
         setFormData({//Una vez guardado el formData lo volvemos a poner en blanco
             fecha: "",
             queAyudo: "",
