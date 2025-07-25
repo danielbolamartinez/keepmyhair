@@ -1,0 +1,33 @@
+.reflexionCards {
+    display: flex;
+    gap: 0.75em;
+    flex-wrap: wrap;
+    justify-content: left;
+
+    details {
+        box-shadow: 0em 0em 0.55em rgb(200, 200, 200);
+        border-radius: 0.5em;
+        background-color: white;
+        text-align: left;
+        max-height: 1em;
+        flex-direction: column;
+        padding: 0.5em;
+        width: 15em;
+        summary {
+            list-style: none;
+        }
+
+        div {
+
+            align-items: center;
+
+            h4,
+            p {
+                margin: 0;
+            }
+        }
+    }
+    details[open]{
+        min-height:fit-content;
+    }
+}

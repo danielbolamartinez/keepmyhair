@@ -41,13 +41,14 @@ export default function AddEditReflexion({ fecha, onClose }: AddEditProps) {//Co
             minute: "numeric",
             second: "numeric",
         });
-        
 
-        if (fecha !== "") { 
-            editReflexion(formData) 
-        }else{
+
+        if (fecha !== "") {
+            editReflexion(formData)
+        } else {
             formData.fecha = formatter.format(Date.now());
-        addReflexion(formData);}
+            addReflexion(formData);
+        }
         setFormData({//Una vez guardado el formData lo volvemos a poner en blanco
             fecha: "",
             queAyudo: "",

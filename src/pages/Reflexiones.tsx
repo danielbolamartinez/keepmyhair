@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import { getAllReflexiones } from "../lib/db"
+import { getAllReflexiones, deleteReflexion } from "../lib/db"
 import type { Reflexion } from "../lib/db";
 import AddEditReflexion from "../elements/AddEditReflexion"
-
+import "../assets/reflexion.css"
 
 export default function Reflexiones() {
    const [reflexiones, setReflexiones] = useState<Reflexion[]>([]);
@@ -32,19 +32,30 @@ export default function Reflexiones() {
       <>
          <h1>Reflexiones:</h1>
          <button onClick={() => activarEditar()}>➕</button>
-         <div>
+         <div className="reflexionCards">
             {reflexiones.map((reflex) => (
-               <details>
-                  <summary key={reflex.fecha}>{reflex.fecha}</summary>
-                  <h5>¿Qué me ayudó hoy?</h5>
-                  <p>{reflex.queAyudo}</p>
-                  <h5>¿Hubo algún momento difícil? ¿Por qué?</h5>
-                  <p>{reflex.momentoDificil}</p>
-                  <h5>¿Qué quiero probar mañana?</h5>
-                  <p>{reflex.queProbar}</p>
-                  <button onClick={() => activarEditar(reflex.fecha)}>
-                     Editar
-                  </button>
+               <details key={reflex.fecha}>
+                  <summary>{reflex.fecha}</summary>
+                  <div>
+                     <h4>¿Qué me ayudó hoy?</h4>
+                     <p>{reflex.queAyudo}</p>
+                  </div>
+                  <div>
+                     <h4>¿Hubo algún momento difícil? ¿Por qué?</h4>
+                     <p>{reflex.momentoDificil}</p>
+                  </div>
+                  <div>
+                     <h4>¿Qué quiero probar mañana?</h4>
+                     <p>{reflex.queProbar}</p>
+                  </div>
+                  <div>
+                     <button onClick={() => activarEditar(reflex.fecha)}>
+                        Editar
+                     </button>
+                     <button onClick={() => deleteReflexion(reflex.fecha)}>
+                        Borrar
+                     </button>
+                  </div>
                </details>
             ))}
          </div>
