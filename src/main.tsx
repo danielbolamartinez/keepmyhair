@@ -12,7 +12,7 @@ createRoot(document.getElementById('root')!).render(
 );
 
 // Registro del Service Worker
-if ('serviceWorker' in navigator) {
+/*if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
     navigator.serviceWorker.register('/service-worker.js')
       .then(registration => {
@@ -22,5 +22,5 @@ if ('serviceWorker' in navigator) {
         console.log('Error al registrar el Service Worker:', error);
       });
   });
-}
+}*/
 

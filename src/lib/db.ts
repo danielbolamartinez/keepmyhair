@@ -24,11 +24,11 @@ export interface Reflexion {
 
 interface TricoDB extends DBSchema {
     registro: {
-        key: number;//Será la fecha
+        key: number;
         value: Registro;
     };
     reflexion: {
-        key: string;
+        key: string; // Será la fecha
         value: Reflexion;
     };
 }

@@ -13,8 +13,10 @@
         flex-direction: column;
         padding: 0.5em;
         width: 15em;
+        cursor: pointer;
         summary {
             list-style: none;
+            
         }
 
         div {
