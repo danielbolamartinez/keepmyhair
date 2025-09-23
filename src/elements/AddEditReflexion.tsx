@@ -1,4 +1,4 @@
-import { addReflexion, editReflexion, getReflexion, deleteReflexion } from "../lib/db"
+import { addReflexion, editReflexion, getReflexion } from "../lib/db"
 import { useEffect, useState } from "react"
 import type { Reflexion } from "../lib/db";
 
@@ -59,14 +59,14 @@ export default function AddEditReflexion({ fecha, onClose }: AddEditProps) {//Co
         onClose();
     }
 
-    function borrarReflexion() {
+    /*function borrarReflexion() {
         if (formData.fecha !== undefined) {
             console.log(`El id es ${formData.fecha}`);
             deleteReflexion(formData.fecha);
         } else {
-            console.warn("No hay Fecha para borrar el Reflexion");
+            console.warn("No hay Fecha para borrar Reflexion");
         }
-    }
+    }*/
 
     return (
         <>
