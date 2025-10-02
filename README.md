@@ -26,4 +26,4 @@ Aquí añadiremos pensamientos al respecto, está organizado como un diario, pue
 
 Aplicación en construcción. Pero la estoy desarrollando como una PWA (Progressive Web App), por lo que podremos instalar directamente desde la web*, añadiré instrucciones.
 
-* No se guardan registros de nada, todo lo que se anota en la app se queda guardado en el dispositivo propio.
+/* No se guardan datos, todo lo que se anota en la app se queda guardado en el dispositivo propio.
