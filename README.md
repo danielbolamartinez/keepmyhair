@@ -1,54 +1,29 @@
-# React + TypeScript + Vite
+# Keep My Hair
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Keep My Hair es un proyecto para buscar patrones en aquellos con tricotilomanía.
 
-Currently, two official plugins are available:
+## Tricotilomanía
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+La tricotilomanía, el hábito de arrancarse el pelo, es una afección de salud mental. Consiste en un deseo irresistible, frecuente y repetido de arrancarse el pelo del cuero cabelludo, las cejas u otras partes del cuerpo. Por más que la persona intente resistirse, no puede dejar de hacerlo. La tricotilomanía forma parte de un grupo de afecciones denominadas conductas repetitivas centradas en el cuerpo.
 
-## Expanding the ESLint configuration
+## Busqueda de patrones
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+He creado esta aplicación con la intención de que aquellos que sufran de tricotilomanía sean capaces de encontrar esos momentos en los que se inicia la arrancada, de forma que se encuentren patrones en uno mismo en los que ocurre y con ello buscar la manera de parar o incluso no llegar a arrancar pelos.
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## ¿Cómo funciona?
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Esta app esta dividida en dos partes.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Registro
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+En esta vamos a registrar los momentos en los que hemos iniciado el arranque de pelo, de esta manera queremos ver por qué ocurre. Cada vez que registremos un momento se creará una tarjeta para visualizarlo. Nos ayuda a hacernos conscientes de que nos lleva a esta situación.
+
+### Reflexiones
+
+Aquí añadiremos pensamientos al respecto, está organizado como un diario, puesto con fechas, con el fín de evaluar la evolución de la arrancada, de manera que vamos a ir anotando que comportamientos nos ayudan a evitar la arrancada y cómo lo hemos conseguido.
+
+## Como usarlo
+
+Aplicación en construcción. Pero la estoy desarrollando como una PWA (Progressive Web App), por lo que podremos instalar directamente desde la web*, añadiré instrucciones.
+
+* No se guardan registros de nada, todo lo que se anota en la app se queda guardado en el dispositivo propio.
