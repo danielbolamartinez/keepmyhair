@@ -1,4 +1,4 @@
-# 🧠 keepmyhair
+# 👌​ Keep My Hair
 
 **Una app para ayudar a tratar la tricotilomanía — A PWA designed to help manage trichotillomania.**  
 [🌐 keepmyhair.danielbolamartinez.com](https://keepmyhair.danielbolamartinez.com)
@@ -22,18 +22,6 @@ Ayudar a los usuarios a **comprender mejor su relación con la tricotilomanía**
 - 💾 Datos almacenados en **IndexedDB** para uso **offline**.  
 - 📱 Instalación como **PWA** (app nativa en el móvil).  
 - ⚡ Construida con **React + Vite** para un rendimiento óptimo.  
-
----
-
-
-## 🧠 Parte técnica
-
-### 🧩 Stack principal
-- **React** – interfaz de usuario reactiva y modular.  
-- **Vite** – entorno de desarrollo rápido.  
-- **IndexedDB** – almacenamiento local persistente.  
-- **PWA** – instalación en dispositivos y uso sin conexión.  
-- *(Opcional: TailwindCSS si está incluido en el proyecto.)*
 
 ---
 
@@ -118,6 +106,14 @@ También puedes instalar la PWA desde:
 
 ✨ *Disfruta de keepmyhair en cualquier dispositivo, con acceso rápido, sin necesidad de tiendas de apps y con soporte offline.*
 
+---
+
+### 🧩 Stack principal
+- **React** – interfaz de usuario reactiva y modular.  
+- **Vite** – entorno de desarrollo rápido.  
+- **IndexedDB** – almacenamiento local persistente.  
+- **PWA** – instalación en dispositivos y uso sin conexión.  
+- *(Opcional: TailwindCSS si está incluido en el proyecto.)*
 
 ---
 
@@ -182,14 +178,85 @@ To help users **understand their habits**, become aware of triggers, and support
 
 ### ⚙️ Installation
 
-```bash
-git clone https://github.com/danielbolamartinez/keepmyhair.git
-cd keepmyhair
-npm install
-npm run dev
-```
+#### 📱 Guide to Installing a PWA on Different Devices
 
-Access the app in your browser and install it from the browser’s PWA install option.
+A **Progressive Web App (PWA)** behaves like a native mobile or desktop app, but can be installed directly from your browser — no need for the Play Store or App Store.
+
+Below are the steps to install *keepmyhair* (or any other PWA) on your device.
+
+---
+
+##### 💻 On Computers (Windows, macOS, Linux)
+
+###### 🟦 Google Chrome / Microsoft Edge
+1. Open the website:  
+   👉 [https://keepmyhair.danielbolamartinez.com](https://keepmyhair.danielbolamartinez.com)
+2. Wait a few seconds until the **install icon** appears in the address bar (a downward arrow or “+” sign).
+3. Click **“Install App”**.
+4. The app will open in its own window, just like a native program.
+5. (Optional) Pin it to your desktop or taskbar for quick access.
+
+###### 🔵 Firefox
+- Firefox **does not yet support full PWA installation** on desktop.  
+  However, you can still **bookmark the page** or **pin it to your dock** for quick access.
+
+---
+
+##### 📱 On Android Devices
+
+###### 🌐 Google Chrome
+1. Open the website:  
+   👉 [https://keepmyhair.danielbolamartinez.com](https://keepmyhair.danielbolamartinez.com)
+2. Wait a few seconds and you’ll see a pop-up prompt:  
+   **“Install app”** or **“Add keepmyhair to Home screen.”**
+3. Tap **Install**.
+4. The app will appear on your home screen and will work **offline**.
+
+###### 🟢 Other supported browsers
+You can also install the PWA from:
+- **Edge**  
+- **Brave**  
+- **Samsung Internet**
+
+(The steps are the same — look for “Add to Home screen.”)
+
+---
+
+##### 🍏 On iPhone / iPad (iOS / iPadOS)
+
+###### 🌍 Safari
+1. Open the website:  
+   👉 [https://keepmyhair.danielbolamartinez.com](https://keepmyhair.danielbolamartinez.com)
+2. Tap the **Share icon** (the square with an arrow pointing up, at the bottom or top of the screen).
+3. Scroll down and select **“Add to Home Screen.”**
+4. Tap **Add** in the top-right corner.
+5. The *keepmyhair* icon will now appear on your home screen like a native app.
+
+> 💡 Note: On iOS, PWAs can **only be installed from Safari** (not from Chrome or Firefox).
+
+---
+
+##### 🧩 Additional Tips
+
+- 🔄 If you don’t see the install option, make sure the website is fully loaded and uses a secure HTTPS connection.  
+- 📶 Once installed, *keepmyhair* works **offline** thanks to its **Service Worker** and **IndexedDB** technologies.  
+- 🧠 You can remove or reinstall it just like any other app.
+
+---
+
+##### 🧠 Quick Summary
+
+| Platform | Recommended Browser | Installation | Offline Support |
+|-----------|--------------------|---------------|-----------------|
+| Windows/macOS/Linux | Chrome / Edge | ✅ Yes | ✅ Yes |
+| Android | Chrome / Edge / Brave / Samsung Internet | ✅ Yes | ✅ Yes |
+| iOS / iPadOS | Safari | ✅ Yes (Add to Home Screen) | ✅ Yes |
+| Firefox (desktop) | — | ⚠️ Limited | ✅ Yes (no native install) |
+
+---
+
+✨ *Enjoy keepmyhair on any device — fast access, offline support, and no app store required.*
+
 
 ---
 
